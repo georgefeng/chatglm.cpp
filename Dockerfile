@@ -4,14 +4,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt update
-RUN apt-get -y install git cmake g++ python3-dev python3-pip libatlas-base-dev 
+RUN apt-get -y install curl git cmake g++ python3-dev python3-pip libatlas-base-dev 
 
 # Clone the repository and its submodules
 RUN git clone --recursive https://github.com/li-plus/chatglm.cpp.git
 
 WORKDIR /chatglm.cpp
 
-RUN apt-get update && apt-get install -y curl
 RUN curl -o chatglm2-ggml.bin https://huggingface.co/georgeff/chatglm2-cpp/resolve/main/chatglm2-ggml.bin
 
 # Build the project with CPU acceleration
