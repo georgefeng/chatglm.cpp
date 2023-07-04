@@ -11,7 +11,7 @@ RUN git clone --recursive https://github.com/li-plus/chatglm.cpp.git
 
 WORKDIR /chatglm.cpp
 
-RUN wget https://huggingface.co/georgeff/chatglm2-cpp/resolve/main/chatglm2-ggml.bin
+RUN wget -q -O chatglm2-ggml.bin https://huggingface.co/georgeff/chatglm2-cpp/resolve/main/chatglm2-ggml.bin
 
 # Build the project with CPU acceleration
 RUN cmake -B build && \
