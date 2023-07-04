@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install dependencies
 RUN apt-get update && \
     apt-get -y install git cmake g++ python3-dev python3-pip libatlas-base-dev libopenblas-dev
