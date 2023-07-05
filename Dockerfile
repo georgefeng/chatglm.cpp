@@ -23,7 +23,7 @@ RUN cmake -B build && \
 # CMD ["-m", "chatglm2-ggml.bin", "-p", "你好"]
 
 # Web mode
-RUN pip install 
+RUN pip install .
 
 ENTRYPOINT ["python3", "examples/web_demo.py", "-m", "chatglm2-ggml.bin"]
 
