@@ -7,7 +7,7 @@ RUN apt update
 RUN apt-get -y install wget git cmake g++ python3-dev python3-pip libatlas-base-dev 
 
 # Clone the repository and its submodules
-RUN git clone --recursive https://github.com/li-plus/chatglm.cpp.git
+RUN git clone --recursive https://github.com/georgefeng/chatglm.cpp.git
 
 WORKDIR /chatglm.cpp
 
