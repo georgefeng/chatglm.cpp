@@ -17,5 +17,5 @@ RUN wget -q -O chatglm2-ggml.bin https://huggingface.co/georgeff/chatglm2-cpp/re
 RUN cmake -B build && \
     cmake --build build -j
 
-ENTRYPOINT ["build/bin/main"]
+ENTRYPOINT ["build/bin/main","-m", "chatglm2-ggml.bin"]
 CMD ["-m", "chatglm2-ggml.bin", "-p", "你好"]
