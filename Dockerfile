@@ -18,4 +18,4 @@ RUN cmake -B build && \
     cmake --build build -j
 
 ENTRYPOINT ["build/bin/main"]
-CMD ["-p", "你好"]
+CMD ["-m", "chatglm2-ggml.bin", "-p", "你好"]
