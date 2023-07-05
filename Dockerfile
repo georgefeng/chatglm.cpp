@@ -27,7 +27,7 @@ RUN pip install .
 RUN pip install gradio mdtex2html
 
 
-ENTRYPOINT ["python3", "examples/web_demo.py", "-m", "chatglm2-ggml.bin"]
+ENTRYPOINT ["python3", "examples/web_demo_dev.py", "-m", "chatglm2-ggml.bin"]
 
 CMD ["-m", "chatglm2-ggml.bin"]
 # Expose port for web demo
