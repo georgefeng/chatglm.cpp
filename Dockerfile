@@ -24,7 +24,7 @@ RUN cmake -B build && \
 
 # Web mode
 RUN pip install .
-RUN pip install gradio
+RUN pip install gradio mdtex2html
 
 
 ENTRYPOINT ["python3", "examples/web_demo.py", "-m", "chatglm2-ggml.bin"]
